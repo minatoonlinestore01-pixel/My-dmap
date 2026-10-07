@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Map</title>
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        📍 Smart Map
+    </div>
+
+    <div class="search-container">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for a location..."
+        >
+        <button id="searchBtn">🔍 Search</button>
+    </div>
+
+    <button id="darkModeBtn">🌙</button>
+</header>
+
+
+<div class="app-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h3>Navigation</h3>
+
+        <button id="homeBtn">
+            🏠 Home
+        </button>
+
+        <button id="locationBtn">
+            🧭 My Location
+        </button>
+
+        <button id="tokyoBtn">
+            📍 Tokyo
+        </button>
+
+        <button id="restaurantsBtn">
+            🍽️ Restaurants
+        </button>
+
+        <button id="clearBtn">
+            🗑️ Clear Markers
+        </button>
+
+        <div class="info-box">
+            <h3>Selected Location</h3>
+
+            <p id="locationName">
+                No location selected
+            </p>
+
+            <p id="coordinates">
+                Latitude: -- <br>
+                Longitude: --
+            </p>
+        </div>
+
+    </aside>
+
+
+    <!-- Map -->
+    <main id="map"></main>
+
+</div>
+
+
+<!-- Leaflet JavaScript -->
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+<div class="directions-box">
+    <h3>🚗 Directions</h3>
+
+    <input id="startLocation"
+           type="text"
+           placeholder="Starting location">
+
+    <input id="destination"
+           type="text"
+           placeholder="Destination">
+
+    <button id="routeBtn">
+        Show Route
+    </button>
+</div>
